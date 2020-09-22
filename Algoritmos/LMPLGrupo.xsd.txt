@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Paulo (Bermejo) -->
+<xs:schema targetNamespace="http://www.cnpq.br/lmpl/2002/XSD/Grupo" xmlns="http://www.cnpq.br/lmpl/2002/XSD/Grupo" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Ontologia XML para a Unidade de Informação de Grupo de Pesquisa</xs:documentation>
+		<xs:documentation>Todos os direitos reservados a Comunidade LMPL (http://lattes.cnpq.br/lmpl)</xs:documentation>
+		<xs:documentation>Versão 1.0.1 - Atualizada em 16/12/2002</xs:documentation>
+		<xs:documentation>Dúvidas e sugestões podem ser enviadas a lmpl@cnpq.br</xs:documentation>
+	</xs:annotation>
+	<xs:element name="GRUPO-DE-PESQUISA">
+		<xs:annotation>
+			<xs:documentation>Elemento raiz da Unidade de Informação para Grupo de Pesquisa</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IDENTIFICACAO-DO-GRUPO" type="TipoIDENTIFICACAO-DO-GRUPO"/>
+				<xs:element name="PESQUISADORES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PESQUISADOR" type="TipoPesquisador" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="ChaveNOME-COMPLETO-DO-PESQUISADOR">
+						<xs:selector xpath="PESQUISADOR">
+							<xs:annotation>
+								<xs:documentation>Chave primária para o atributo @NOME-COMPLETO do elemento PESQUISADOR</xs:documentation>
+							</xs:annotation>
+						</xs:selector>
+						<xs:field xpath="@NOME-COMPLETO"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="ESTUDANTES" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ESTUDANTE" type="TipoEstudante" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="ChaveNOME-COMPLETO-DO-ESTUDANTE">
+						<xs:selector xpath="ESTUDANTE">
+							<xs:annotation>
+								<xs:documentation>Chave primária para o atributo @NOME-COMPLETO do elemento ESTUDANTE</xs:documentation>
+							</xs:annotation>
+						</xs:selector>
+						<xs:field xpath="@NOME-COMPLETO"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="TECNICOS" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TECNICO" type="TipoTECNICO" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="ChaveSEQUENCIA-TECNICO">
+						<xs:selector xpath="TECNICO">
+							<xs:annotation>
+								<xs:documentation>Chave primária para o atributo @SEQUENCIA-TECNICO do elemento TECNICO</xs:documentation>
+							</xs:annotation>
+						</xs:selector>
+						<xs:field xpath="@SEQUENCIA-TECNICO"/>
+					</xs:unique>
+					<xs:unique name="ChaveNOME-COMPLETO-DO-TECNICO">
+						<xs:selector xpath="TECNICO">
+							<xs:annotation>
+								<xs:documentation>Chave primária para o atributo @NOME-COMPLETO do elemento TECNICO</xs:documentation>
+							</xs:annotation>
+						</xs:selector>
+						<xs:field xpath="@NOME-COMPLETO"/>
+					</xs:unique>
+					<!-- CHAVE PARA O ATRIBUTO SEQUENCIA-TECNICO -->
+				</xs:element>
+				<xs:element name="LINHAS-DE-PESQUISA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LINHA-DE-PESQUISA" type="TipoLINHA-DE-PESQUISA" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EMPRESAS" minOccurs="0">
+					<xs:complexType name="TipoEMPRESAS">
+						<xs:sequence>
+							<xs:element name="EMPRESA" type="TipoEMPRESA" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="ChaveSEQUENCIA-EMPRESA">
+						<xs:selector xpath="EMPRESA">
+							<xs:annotation>
+								<xs:documentation>Chave primária para o atributo @SEQUENCIA-EMPRESA do elemento EMPRESA</xs:documentation>
+							</xs:annotation>
+						</xs:selector>
+						<xs:field xpath="@SEQUENCIA-EMPRESA"/>
+					</xs:unique>
+					<xs:unique name="ChaveNOME-DA-EMPRESA">
+						<xs:selector xpath="EMPRESA">
+							<xs:annotation>
+								<xs:documentation>Chave primária para o atributo @NOME-DA-EMPRESA do elemento EMPRESA</xs:documentation>
+							</xs:annotation>
+						</xs:selector>
+						<xs:field xpath="@NOME-DA-EMPRESA"/>
+					</xs:unique>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="SISTEMA-ORIGEM-XML" type="string20" use="required"/>
+			<xs:attribute name="DATA-ATUALIZACAO" type="data" use="optional"/>
+			<xs:attribute name="FORMATO-DATA-ATUALIZACAO" use="optional" fixed="DDMMAAAA"/>
+			<xs:attribute name="HORA-ATUALIZACAO" type="TipoHORA" use="optional"/>
+			<xs:attribute name="FORMATO-HORA-ATUALIZACAO" use="optional" fixed="HHMMSS"/>
+		</xs:complexType>
+		<xs:unique name="ChaveSEQUENCIA-LINHA-DE-PESQUISA">
+			<xs:selector xpath="LINHAS-DE-PESQUISA/LINHA-DE-PESQUISA">
+				<xs:annotation>
+					<xs:documentation>Chave primária para o atributo @SEQUENCIA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@SEQUENCIA-LINHA-DE-PESQUISA"/>
+		</xs:unique>
+		<xs:unique name="ChaveNOME-DA-LINHA-DE-PESQUISA">
+			<xs:selector xpath="LINHAS-DE-PESQUISA/LINHA-DE-PESQUISA">
+				<xs:annotation>
+					<xs:documentation>Chave primária para o atributo @NOME-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@NOME-DA-LINHA-DE-PESQUISA"/>
+		</xs:unique>
+		<xs:unique name="ChaveSEQUENCIA-ESTUDANTE">
+			<xs:selector xpath="ESTUDANTES/ESTUDANTE">
+				<xs:annotation>
+					<xs:documentation>Chave primária para o atributo @SEQUENCIA-ESTUDANTE do elemento ESTUDANTE</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@SEQUENCIA-ESTUDANTE"/>
+		</xs:unique>
+		<xs:unique name="ChaveSEQUENCIA-PESQUISADOR">
+			<xs:selector xpath="PESQUISADORES/PESQUISADOR">
+				<xs:annotation>
+					<xs:documentation>Chave primária para o atributo @SEQUENCIA-PESQUISADOR do elemento PESQUISADOR</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@SEQUENCIA-PESQUISADOR"/>
+		</xs:unique>
+		<xs:keyref name="RefSEQUENCIA-LINHA-DE-PESQUISA-ESTUDANTE" refer="ChaveSEQUENCIA-LINHA-DE-PESQUISA">
+			<xs:selector xpath="ESTUDANTES/ESTUDANTE/LINHAS-DE-PESQUISA-RH/LINHA-DE-PESQUISA-RH">
+				<xs:annotation>
+					<xs:documentation>Chave secundária definida para assegurar a integridade do atributo @SEQUENCIA-IDENTIFICADORA-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA-RH com o atributo @SEQUENCIA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@SEQUENCIA-IDENTIFICADORA-DA-LINHA-DE-PESQUISA"/>
+		</xs:keyref>
+		<xs:keyref name="RefSEQUENCIA-LINHA-DE-PESQUISA-PESQUISADOR" refer="ChaveSEQUENCIA-LINHA-DE-PESQUISA">
+			<xs:selector xpath="PESQUISADORES/PESQUISADOR/LINHAS-DE-PESQUISA-RH/LINHA-DE-PESQUISA-RH">
+				<xs:annotation>
+					<xs:documentation>Chave secundária definida para assegurar a integridade do atributo @SEQUENCIA-IDENTIFICADORA-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA-RH com o atributo @SEQUENCIA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@SEQUENCIA-IDENTIFICADORA-DA-LINHA-DE-PESQUISA"/>
+		</xs:keyref>
+		<xs:keyref name="RefNOME-DA-LINHA-DE-PESQUISA-ESTUDANTE" refer="ChaveNOME-DA-LINHA-DE-PESQUISA">
+			<xs:selector xpath="ESTUDANTES/ESTUDANTE/LINHAS-DE-PESQUISA-RH/LINHA-DE-PESQUISA-RH">
+				<xs:annotation>
+					<xs:documentation>Chave secundária definida para assegurar a integridade do atributo @NOME-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA-RH com o atributo @NOME-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@NOME-DA-LINHA-DE-PESQUISA"/>
+		</xs:keyref>
+		<xs:keyref name="RefNOME-DA-LINHA-DE-PESQUISA-PESQUISADOR" refer="ChaveNOME-DA-LINHA-DE-PESQUISA">
+			<xs:selector xpath="PESQUISADORES/PESQUISADOR/LINHAS-DE-PESQUISA-RH/LINHA-DE-PESQUISA-RH">
+				<xs:annotation>
+					<xs:documentation>Chave secundária definida para assegurar a integridade do atributo @NOME-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA-RH com o atributo @NOME-DA-LINHA-DE-PESQUISA do elemento LINHA-DE-PESQUISA</xs:documentation>
+				</xs:annotation>
+			</xs:selector>
+			<xs:field xpath="@NOME-DA-LINHA-DE-PESQUISA"/>
+		</xs:keyref>
+		<!-- XXXXXXXXXXXXXXX DEFINIÇÃO DE CHAVES PARA OS ELEMENTOS LINHA-DE-PESQUISA, ESTUDANTE E PESQUISADOR XXXXXXXXXXXXXXX -->
+		<!-- CHAVE PARA O ATRIBUTO SEQUENCIA EM LINHA-DE-PESQUISA -->
+		<!-- CHAVE PARA O ATRIBUTO SEQUENCIA EM ESTUDANTE -->
+		<!-- CHAVE PARA O ATRIBUTO SEQUENCIA EM PESQUISADOR -->
+		<!-- XXXXXXXXXXXXXXX DEFINIÇÃO DOS RELACIONAMENTOS XXXXXXXXXXXXXXX -->
+		<!-- CONSTRAINT PARA O ATRIBUTO SEQUENCIA-LINHA-DE-PESQUISA EM ESTUDANTE -->
+		<!-- CONSTRAINT PARA O ATRIBUTO SEQUENCIA-LINHA-DE-PESQUISA EM PESQUISADOR -->
+	</xs:element>
+	<!--DEFINIÇÃO DOS TIPOS DO ELEMENTO GRUPO-DE-PESQUISA-->
+	<xs:complexType name="TipoIDENTIFICACAO-DO-GRUPO">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento de Identificação do Grupo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LIDERES">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PRIMEIRO-LIDER" type="TipoLIDER"/>
+						<xs:element name="SEGUNDO-LIDER" type="TipoLIDER" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ENDERECO-INSTITUCIONAL-DO-GRUPO" type="TipoENDERECO-INSTITUCIONAL-DO-GRUPO"/>
+			<xs:element name="REPERCUSSOES" type="string64000" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="NOME-DO-GRUPO" type="string200" use="required"/>
+		<xs:attribute name="ANO-DE-CRIACAO" type="TipoANO" use="required"/>
+		<xs:attribute name="GRANDE-AREA-PREDOMINANTE" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="OUTROS"/>
+					<xs:enumeration value="LINGUISTICA-LETRAS-E-ARTES"/>
+					<xs:enumeration value="CIENCIAS-HUMANAS"/>
+					<xs:enumeration value="CIENCIAS-SOCIAIS-APLICADAS"/>
+					<xs:enumeration value="CIENCIAS-AGRARIAS"/>
+					<xs:enumeration value="CIENCIAS-DA-SAUDE"/>
+					<xs:enumeration value="ENGENHARIAS"/>
+					<xs:enumeration value="CIENCIAS-BIOLOGICAS"/>
+					<xs:enumeration value="CIENCIAS-EXATAS-E-DA-TERRA"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="AREA-PREDOMINANTE" type="string85" use="required"/>
+		<xs:attribute name="NOME-DA-INSTITUICAO" type="string75" use="required"/>
+		<xs:attribute name="SIGLA-DA-INSTITUICAO" type="string16" use="required"/>
+		<xs:attribute name="UF-DA-INSTITUICAO" type="string2" use="required"/>
+		<xs:attribute name="NOME-DO-PAIS-DA-INSTITUICAO" type="string20" use="required"/>
+		<xs:attribute name="SIGLA-DO-PAIS-DA-INSTITUICAO" type="string3" use="required"/>
+		<xs:attribute name="FLAG-AGENCIA-FOMENTO" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="SIM"/>
+					<xs:enumeration value="NAO"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="FLAG-INSTITUICAO-DE-ENSINO" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="SIM"/>
+					<xs:enumeration value="NAO"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="NOME-DO-ORGAO" type="string75" use="required"/>
+		<xs:attribute name="NOME-DA-UNIDADE" type="string75" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TipoLIDER">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Líder</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="NOME-COMPLETO" type="string60" use="required"/>
+		<xs:attribute name="NACIONALIDADE" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="BRASILEIRA"/>
+					<xs:enumeration value="ESTRANGEIRA"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="CPF" type="string11" use="optional"/>
+		<xs:attribute name="PAIS-DE-NASCIMENTO" type="string20" use="required"/>
+		<xs:attribute name="DATA-DE-NASCIMENTO" type="data" use="optional"/>
+		<xs:attribute name="FORMATO-DATA-DE-NASCIMENTO" use="optional" fixed="DDMMAAAA"/>
+	</xs:complexType>
+	<xs:complexType name="TipoENDERECO-INSTITUCIONAL-DO-GRUPO">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Endereço Institucional do Grupo</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="LOGRADOURO-E-COMPLEMENTO" type="string60" use="required"/>
+		<xs:attribute name="BAIRRO" type="string25" use="optional"/>
+		<xs:attribute name="UF" type="string2" use="required"/>
+		<xs:attribute name="CIDADE" type="string45" use="required"/>
+		<xs:attribute name="CEP" type="string9" use="required"/>
+		<xs:attribute name="DDD" type="string5" use="optional"/>
+		<xs:attribute name="TELEFONE" type="string10" use="optional"/>
+		<xs:attribute name="RAMAL" type="string5" use="optional"/>
+		<xs:attribute name="FAX" type="string10" use="optional"/>
+		<xs:attribute name="E-MAIL" type="string70" use="required"/>
+		<xs:attribute name="HOME-PAGE" type="string255" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="TipoRH">
+		<xs:annotation>
+			<xs:documentation>Tipo para os elementos Pesquisador e Estudante</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LINHAS-DE-PESQUISA-RH">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="LINHA-DE-PESQUISA-RH" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="SEQUENCIA-LINHA-DE-PESQUISA" type="xs:int" use="required"/>
+								<xs:attribute name="SEQUENCIA-IDENTIFICADORA-DA-LINHA-DE-PESQUISA" type="xs:int" use="required"/>
+								<xs:attribute name="NOME-DA-LINHA-DE-PESQUISA" type="string255" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="NOME-COMPLETO" type="string60" use="required"/>
+		<xs:attribute name="NACIONALIDADE" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="BRASILEIRA"/>
+					<xs:enumeration value="ESTRANGEIRA"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="CPF" type="string11" use="required"/>
+		<xs:attribute name="PAIS-DE-NASCIMENTO" type="string20" use="required"/>
+		<xs:attribute name="DATA-DE-NASCIMENTO" type="data" use="required"/>
+		<xs:attribute name="FORMATO-DATA-DE-NASCIMENTO" use="optional" fixed="DDMMAAAA"/>
+	</xs:complexType>
+	<xs:complexType name="TipoPesquisador">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Pesquisador</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TipoRH">
+				<xs:attribute name="SEQUENCIA-PESQUISADOR" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TipoEstudante">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Estudante</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TipoRH">
+				<xs:attribute name="SEQUENCIA-ESTUDANTE" type="xs:int" use="required"/>
+				<xs:attribute name="NOME-DO-ORIENTADOR-NO-GRUPO" type="string60" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TipoPALAVRAS-CHAVE">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Palavras-Chave</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PALAVRA-CHAVE" nillable="false" maxOccurs="6">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="string50">
+							<xs:attribute name="SEQUENCIA-PALAVRA-CHAVE" type="xs:int" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TipoAREAS-DO-CONHECIMENTO">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Áreas do Conhecimento</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AREA-DO-CONHECIMENTO" maxOccurs="3">
+				<xs:complexType>
+					<xs:attribute name="SEQUENCIA-AREA-DO-CONHECIMENTO" type="xs:int" use="required"/>
+					<xs:attribute name="NOME-GRANDE-AREA-DO-CONHECIMENTO" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:NMTOKEN">
+								<xs:enumeration value="OUTROS"/>
+								<xs:enumeration value="LINGUISTICA-LETRAS-E-ARTES"/>
+								<xs:enumeration value="CIENCIAS-HUMANAS"/>
+								<xs:enumeration value="CIENCIAS-SOCIAIS-APLICADAS"/>
+								<xs:enumeration value="CIENCIAS-AGRARIAS"/>
+								<xs:enumeration value="CIENCIAS-DA-SAUDE"/>
+								<xs:enumeration value="ENGENHARIAS"/>
+								<xs:enumeration value="CIENCIAS-BIOLOGICAS"/>
+								<xs:enumeration value="CIENCIAS-EXATAS-E-DA-TERRA"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="NOME-DA-AREA-DO-CONHECIMENTO" type="string85" use="optional"/>
+					<xs:attribute name="NOME-DA-SUB-AREA-DO-CONHECIMENTO" type="string85" use="optional"/>
+					<xs:attribute name="NOME-DA-ESPECIALIDADE" type="string85" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TipoTECNICO">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Técnico</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="SEQUENCIA-TECNICO" type="xs:int" use="required"/>
+		<xs:attribute name="NOME-COMPLETO" type="string60" use="required"/>
+		<xs:attribute name="ATIVIDADE-NO-GRUPO" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="LABORATORISTA"/>
+					<xs:enumeration value="ANALISTA-DE-SISTEMAS"/>
+					<xs:enumeration value="QUIMICO"/>
+					<xs:enumeration value="ANALISTA-QUIMICO"/>
+					<xs:enumeration value="ENFERMEIRO"/>
+					<xs:enumeration value="MEDICO"/>
+					<xs:enumeration value="TECNICO-DE-LABORATORIO"/>
+					<xs:enumeration value="DIGITADOR"/>
+					<xs:enumeration value="AGRONOMO"/>
+					<xs:enumeration value="TECNOLOGO"/>
+					<xs:enumeration value="BIOQUIMICO"/>
+					<xs:enumeration value="AUXILIAR-DE-LABORATORIO"/>
+					<xs:enumeration value="TECNICO-EM-COMPUTACAO"/>
+					<xs:enumeration value="PROGRAMADOR-DE-COMPUTADOR"/>
+					<xs:enumeration value="DESENHISTA"/>
+					<xs:enumeration value="TECNICO-DE-MANUTENCAO"/>
+					<xs:enumeration value="FARMACEUTICO"/>
+					<xs:enumeration value="AUXILIAR-DE-ENFERMAGEM"/>
+					<xs:enumeration value="OPERADOR-DE-MAQUINAS-E-EQUIPAMENTOS"/>
+					<xs:enumeration value="BIOTERISTA"/>
+					<xs:enumeration value="MECANICO"/>
+					<xs:enumeration value="ECONOMISTA"/>
+					<xs:enumeration value="AUXILIAR-DE-CAMPO"/>
+					<xs:enumeration value="AUXILIAR-DE-BIOTERIO"/>
+					<xs:enumeration value="OPERADOR-DE-COMPUTADOR"/>
+					<xs:enumeration value="HISTOTECNOLOGISTA"/>
+					<xs:enumeration value="OPERADOR-DE-PROCESSOS-INDUSTRIAIS"/>
+					<xs:enumeration value="FISICO"/>
+					<xs:enumeration value="SUPERVISOR"/>
+					<xs:enumeration value="ELETROTECNICO"/>
+					<xs:enumeration value="TORNEIRO-MECANICO"/>
+					<xs:enumeration value="ANALISTA-DE-SUPORTE"/>
+					<xs:enumeration value="MEDICO-VETERINARIO"/>
+					<xs:enumeration value="ANALISTA-DE-LABORATORIO"/>
+					<xs:enumeration value="PSICOLOGO"/>
+					<xs:enumeration value="BIBLIOTECARIO"/>
+					<xs:enumeration value="ANALISTA-ESTATISTICO"/>
+					<xs:enumeration value="ESTATISTICO"/>
+					<xs:enumeration value="TECNICO-EM-RAIOS-X"/>
+					<xs:enumeration value="EDUCADOR"/>
+					<xs:enumeration value="TECNICO-EM-ALIMENTOS"/>
+					<xs:enumeration value="TECNICO-ESPECIALIZADO"/>
+					<xs:enumeration value="BIOLOGO"/>
+					<xs:enumeration value="ZOOTECNISTA"/>
+					<xs:enumeration value="TECNICO-EM-METEOROLOGIA"/>
+					<xs:enumeration value="GEOGRAFO"/>
+					<xs:enumeration value="ASSISTENTE-SOCIAL"/>
+					<xs:enumeration value="TECNICO-EM-CERAMICA"/>
+					<xs:enumeration value="NUTRICIONISTA"/>
+					<xs:enumeration value="ENTREVISTADOR"/>
+					<xs:enumeration value="FOTOGRAFO"/>
+					<xs:enumeration value="TECNICO-MECANICO"/>
+					<xs:enumeration value="HISTORIADOR"/>
+					<xs:enumeration value="TECNICO-AGRICOLA"/>
+					<xs:enumeration value="ASSISTENTE-DE-PESQUISA"/>
+					<xs:enumeration value="PROJETISTA"/>
+					<xs:enumeration value="AUXILIAR-DE-HERBARIO"/>
+					<xs:enumeration value="ARTIFICE"/>
+					<xs:enumeration value="OFICIAL-DE-APOIO-A-PESQUISA-CIENTIFICA"/>
+					<xs:enumeration value="OUTRA-FUNCAO"/>
+					<xs:enumeration value="ENGENHEIRO"/>
+					<xs:enumeration value="AUXILIAR-AGROPECUARIO"/>
+					<xs:enumeration value="TECNICO-EM-ELETRONICA"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="GRAU-DE-ESCOLARIDADE" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="GRADUACAO"/>
+					<xs:enumeration value="ESPECIALIZACAO"/>
+					<xs:enumeration value="MESTRADO"/>
+					<xs:enumeration value="DOUTORADO"/>
+					<xs:enumeration value="POS-DOUTORADO"/>
+					<xs:enumeration value="LIVRE-DOCENCIA"/>
+					<xs:enumeration value="CURSO-TECNICO-PROFISSIONALIZANTE"/>
+					<xs:enumeration value="EXTENSAO-UNIVERSITARIA"/>
+					<xs:enumeration value="MESTRADO-PROFISSIONALIZANTE"/>
+					<xs:enumeration value="ENSINO-FUNDAMENTAL-INCOMPLETO"/>
+					<xs:enumeration value="ENSINO-FUNDAMENTAL"/>
+					<xs:enumeration value="ENSINO-MEDIO"/>
+					<xs:enumeration value="RESIDENCIA-MEDICA"/>
+					<xs:enumeration value="MBA"/>
+					<xs:enumeration value="CURSO-DE-CURTA-DURACAO"/>
+					<xs:enumeration value="APERFEICOAMENTO"/>
+					<xs:enumeration value="OUTROS"/>
+					<xs:enumeration value="NAO-INFORMADO"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TipoLINHA-DE-PESQUISA">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Linha de Pesquisa</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PALAVRAS-CHAVE" type="TipoPALAVRAS-CHAVE" maxOccurs="unbounded">
+				<xs:unique name="ChaveSEQUENCIA-PALAVRA-CHAVE">
+					<xs:selector xpath="PALAVRA-CHAVE">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o atributo @SEQUENCIA-PALAVRA-CHAVE do elemento PALAVRA-CHAVE</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@SEQUENCIA-PALAVRA-CHAVE"/>
+				</xs:unique>
+				<!-- CHAVE PARA O ATRIBUTO SEQUENCIA-PALAVRA-CHAVE -->
+			</xs:element>
+			<xs:element name="PESQUISADORES-LINHA">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PESQUISADOR-LINHA">
+							<xs:complexType>
+								<xs:attribute name="SEQUENCIA-PESQUISADOR" type="xs:int" use="required"/>
+								<xs:attribute name="SEQUENCIA-IDENTIFICADORA-DO-PESQUISADOR" type="xs:int" use="required"/>
+								<xs:attribute name="NOME-COMPLETO" type="string60" use="required"/>
+								<xs:attribute name="CPF" type="string11" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ESTUDANTES-LINHA" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ESTUDANTE-LINHA" type="TipoESTUDANTE-LINHA" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AREAS-DO-CONHECIMENTO" type="TipoAREAS-DO-CONHECIMENTO" maxOccurs="unbounded">
+				<xs:unique name="ChaveSEQUENCIA-AREA-DO-CONHECIMENTO">
+					<xs:selector xpath="AREA-DO-CONHECIMENTO">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o atributo @SEQUENCIA-AREA-DO-CONHECIMENTO do elemento AREA-DO-CONHECIMENTO</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@SEQUENCIA-AREA-DO-CONHECIMENTO"/>
+				</xs:unique>
+				<!-- CHAVE PARA O ATRIBUTO SEQUENCIA-AREA-DO-CONHECIMENTO -->
+			</xs:element>
+			<xs:element name="SETORES-DE-APLICACAO" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="SETOR-DE-APLICACAO" maxOccurs="3">
+							<xs:complexType>
+								<xs:attribute name="SEQUENCIA-SETOR-DE-APLICACAO" type="xs:int" use="required"/>
+								<xs:attribute name="SETOR" type="string255" use="optional"/>
+								<xs:attribute name="SUB-SETOR" type="string255" use="optional"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:unique name="ChaveSETOR-DE-APLICACAO">
+					<xs:selector xpath="SETOR-DE-APLICACAO">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o atributo @SEQUENCIA-SETOR-DE-APLICACAO do elemento SETOR-DE-APLICACAO</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@SEQUENCIA-SETOR-DE-APLICACAO"/>
+				</xs:unique>
+				<!-- CHAVE PARA O ATRIBUTO SETOR-DE-APLICACAO -->
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="SEQUENCIA-LINHA-DE-PESQUISA" type="xs:int" use="required"/>
+		<xs:attribute name="NOME-DA-LINHA-DE-PESQUISA" type="string255" use="required"/>
+		<xs:attribute name="OBJETIVO-DA-LINHA-DE-PESQUISA" type="string64000" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="TipoESTUDANTE-LINHA">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Estudante na Linha de Pesquisa</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="SEQUENCIA-ESTUDANTE" type="xs:int" use="required"/>
+		<xs:attribute name="SEQUENCIA-IDENTIFICADORA-DO-ESTUDANTE" type="xs:int" use="required"/>
+		<xs:attribute name="NOME-COMPLETO" type="string60" use="required"/>
+		<xs:attribute name="CPF" type="string11" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TipoEMPRESA">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Empresa</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SETORES-DE-ATIVIDADE-ECONOMICA">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="SETOR-DE-ATIVIDADE-ECONOMICA" type="TipoSETOR-DE-ATIVIDADE-ECONOMICA"/>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:unique name="ChaveSEQUENCIA-SETOR-DE-ATIVIDADE-ECONOMICA">
+					<xs:selector xpath="SETOR-DE-ATIVIDADE-ECONOMICA">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o atributo @SEQUENCIA-SETOR-DE-ATIVIDADE-ECONOMICA do elemento SETOR-DE-ATIVIDADE-ECONOMICA</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@SEQUENCIA-SETOR-DE-ATIVIDADE-ECONOMICA"/>
+				</xs:unique>
+				<xs:unique name="ChaveValoresSETOR-DE-ATIVIDADE-ECONOMICA">
+					<xs:selector xpath="SETOR-DE-ATIVIDADE-ECONOMICA">
+						<xs:annotation>
+							<xs:documentation>Chave primária para os atributos @GRANDE-SETOR, @SETOR, @SUB-SETOR do elemento SETOR-DE-ATIVIDADE-ECONOMICA</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@GRANDE-SETOR"/>
+					<xs:field xpath="@SETOR"/>
+					<xs:field xpath="@SUB-SETOR"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="TIPOS-DE-RELACAO">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TIPO-DE-RELACAO" type="TipoTIPO-DE-RELACAO" maxOccurs="3"/>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:unique name="ChaveSEQUENCIA-TIPO-DE-RELACAO">
+					<xs:selector xpath="TIPO-DE-RELACAO">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o atributo @SEQUENCIA-TIPO-DE-RELACAO do elemento TIPO-DE-RELACAO</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@SEQUENCIA-TIPO-DE-RELACAO"/>
+				</xs:unique>
+				<xs:unique name="ChaveTIPO-DE-RELACAO">
+					<xs:selector xpath="TIPO-DE-RELACAO">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o elemento TIPO-DE-RELACAO</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="."/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="TIPOS-DE-REMUNERACAO">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TIPO-DE-REMUNERACAO" type="TipoTIPO-DE-REMUNERACAO" maxOccurs="3"/>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:unique name="ChaveSEQUENCIA-TIPO-DE-REMUNERACAO">
+					<xs:selector xpath="TIPO-DE-REMUNERACAO">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o atributo @SEQUENCIA-TIPO-DE-REMUNERACAO do elemento TIPO-DE-REMUNERACAO</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="@SEQUENCIA-TIPO-DE-REMUNERACAO"/>
+				</xs:unique>
+				<xs:unique name="ChaveTIPO-DE-REMUNERACAO">
+					<xs:selector xpath="TIPO-DE-REMUNERACAO">
+						<xs:annotation>
+							<xs:documentation>Chave primária para o elemento TIPO-DE-REMUNERACAO</xs:documentation>
+						</xs:annotation>
+					</xs:selector>
+					<xs:field xpath="."/>
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="SEQUENCIA-EMPRESA" type="xs:int" use="required"/>
+		<xs:attribute name="NOME-DA-EMPRESA" type="string80" use="required"/>
+		<xs:attribute name="SIGLA-DA-EMPRESA" type="string20" use="required"/>
+		<xs:attribute name="UF" type="string2" use="required"/>
+		<xs:attribute name="CIDADE" type="string45" use="required"/>
+		<xs:attribute name="CNPJ" type="string18" use="required"/>
+		<xs:attribute name="SEGMENTO-ECONOMICO" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="PRIMARIO"/>
+					<xs:enumeration value="SECUNDARIO"/>
+					<xs:enumeration value="TERCIARIO"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="NATUREZA-JURIDICA" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="PRIVADA"/>
+					<xs:enumeration value="PUBLICA-FEDERAL"/>
+					<xs:enumeration value="PUBLICA-ESTADUAL"/>
+					<xs:enumeration value="PUBLICA-MUNICIPAL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TipoSETOR-DE-ATIVIDADE-ECONOMICA">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Setor de Atividade Econômica</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="SEQUENCIA-SETOR-DE-ATIVIDADE-ECONOMICA" type="xs:int" use="required"/>
+		<xs:attribute name="GRANDE-SETOR" type="string250" use="required"/>
+		<xs:attribute name="SETOR" type="string250" use="optional"/>
+		<xs:attribute name="SUB-SETOR" type="string250" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="TipoTIPO-DE-RELACAO">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Tipo de Relação</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="TipoBaseTIPO-DE-RELACAO">
+				<xs:attribute name="SEQUENCIA-TIPO-DE-RELACAO" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="TipoBaseTIPO-DE-RELACAO">
+		<xs:annotation>
+			<xs:documentation>Tipo base para o elemento Tipo de Relação</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="PESQUISA-CIENTIFICA-SEM-CONSIDERACOES-DE-USO-IMEDIATO-DOS-RESULTADOS"/>
+			<xs:enumeration value="PESQUISA-CIENTIFICA-COM-CONSIDERACOES-DE-USO-IMEDIATO-DOS-RESULTADOS"/>
+			<xs:enumeration value="ATIVIDADES-DE-ENGENHARIA-NAO-ROTINEIRA-INCLUSIVE-O-DESENVOLVIMENTO-DE-PROTOTIPO-CABECA-DE-SERIE-OU-PLANTA-PILOTO-PARA-O-PARCEIRO"/>
+			<xs:enumeration value="ATIVIDADES-DE-ENGENHARIA-NAO-ROTINEIRA-INCLUSIVE-O-DESENVOLVIMENTO-FABRICACAO-DE-EQUIPAMENTOS-PARA-O-GRUPO"/>
+			<xs:enumeration value="DESENVOLVIMENTO-DE-SOFTWARE-NAO-ROTINEIRO-PARA-O-GRUPO-PELO-PARCEIRO"/>
+			<xs:enumeration value="DESENVOLVIMENTO-DE-SOFTWARE-PARA-O-PARCEIRO-PELO-GRUPO"/>
+			<xs:enumeration value="TRANSFERENCIA-DE-TECNOLOGIA-DESENVOLVIDA-PELO-GRUPO-PARA-O-PARCEIRO"/>
+			<xs:enumeration value="TRANSFERENCIA-DE-TECNOLOGIA-DESENVOLVIDA-PELO-PARCEIRO-PARA-O-GRUPO"/>
+			<xs:enumeration value="ATIVIDADES-DE-CONSULTORIA-TECNICA-NAO-ENGLOBADAS-EM-QUALQUER-DAS-CATEGORIAS-ANTERIORES"/>
+			<xs:enumeration value="FORNECIMENTO-PELO-PARCEIRO-DE-INSUMOS-MATERIAIS-PARA-O-GRUPO-SEM-VINCULACAO-A-UM-PROJETO-ESPECIFICO-DE-INTERESSE-MUTUO"/>
+			<xs:enumeration value="FORNECIMENTO-PELO-GRUPO-DE-INSUMOS-MATERIAIS-PARA-O-PARCEIRO-SEM-VINCULACAO-A-UM-PROJETO-ESPECIFICO-DE-INTERESSE-MUTUO"/>
+			<xs:enumeration value="TREINAMENTO-DE-PESSOAL-DO-PARCEIRO-PELO-GRUPO-INCLUINDO-CURSOS-E-TREINAMENTO-EM-SERVICO"/>
+			<xs:enumeration value="TREINAMENTO-DE-PESSOAL-DO-GRUPO-PELO-PARCEIRO-INCLUINDO-CURSOS-E-TREINAMENTO-EM-SERVICO"/>
+			<xs:enumeration value="OUTROS-TIPOS-PREDOMINANTES-DE-RELACIONAMENTO-QUE-NAO-SE-ENQUADREM-EM-NENHUM-DOS-ANTERIORES"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TipoTIPO-DE-REMUNERACAO">
+		<xs:annotation>
+			<xs:documentation>Tipo para o elemento Tipo de Remuneração</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="TipoBaseTIPO-DE-REMUNERACAO">
+				<xs:attribute name="SEQUENCIA-TIPO-DE-REMUNERACAO" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="TipoBaseTIPO-DE-REMUNERACAO">
+		<xs:annotation>
+			<xs:documentation>Tipo base para o elemento Tipo de Remuneração</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="TRANSFERENCIA-DE-RECURSOS-FINANCEIROS-DO-PARCEIRO-PARA-O-GRUPO"/>
+			<xs:enumeration value="TRANSFERENCIA-DE-RECURSOS-FINANCEIROS-DO-GRUPO-PARA-O-PARCEIRO"/>
+			<xs:enumeration value="FORNECIMENTO-DE-BOLSAS-PARA-O-GRUPO-PELO-PARCEIRO"/>
+			<xs:enumeration value="PARCERIA-SEM-A-TRANSFERENCIA-DE-RECURSOS-DE-QUALQUER-ESPECIE-ENVOLVENDO-EXCLUSIVAMENTE-RELACIONAMENTO-DE-RISCO"/>
+			<xs:enumeration value="TRANSFERENCIA-DE-INSUMOS-MATERIAIS-PARA-AS-ATIVIDADES-DE-PESQUISA-DO-GRUPO"/>
+			<xs:enumeration value="TRANSFERENCIA-DE-INSUMOS-MATERIAIS-PARA-AS-ATIVIDADES-DO-PARCEIRO"/>
+			<xs:enumeration value="TRANSFERENCIA-FISICA-TEMPORÁRIA-DE-RECURSOS-HUMANOS-DO-PARCEIRO-PARA-AS-ATIVIDADES-DE-PESQUISA-DO-GRUPO"/>
+			<xs:enumeration value="TRANSFERENCIA-FISICA-TEMPORÁRIA-DE-RECURSOS-HUMANOS-DO-GRUPO-PARA-AS-ATIVIDADES-DO-PARCEIRO"/>
+			<xs:enumeration value="PARCERIA-COM-TRANSFERENCIA-DE-RECURSOS-DE-QUALQUER-ESPECIE-NOS-DOIS-SENTIDOS"/>
+			<xs:enumeration value="OUTRAS-FORMAS-DE-REMUNERACAO-QUE-NAO-SE-ENQUADREM-EM-NENHUMA-DAS-ANTERIORES"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--tipos simples-->
+	<xs:simpleType name="TipoANO">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (ano)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:gYear">
+			<xs:minInclusive value="1900"/>
+			<xs:maxInclusive value="3000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string20">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 20 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string200">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 200 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string16">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 16 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string75">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 75 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string85">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 85 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="85"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string2">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 2 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string3">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 3 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string50">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 50 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipoHORA">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (hora)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6"/>
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="data">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (data)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string60">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 60 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string25">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 25 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="250"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string45">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 45 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="45"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string9">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 9 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string5">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 5 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string10">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 10 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string70">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 70 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="70"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string255">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 255 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string64000">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 64.000 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string11">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 11 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string80">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 80 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string18">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 18 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="18"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string250">
+		<xs:annotation>
+			<xs:documentation>Tipo pertencente a biblioteca de tipos (Texto com 250 caracteres)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="250"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
