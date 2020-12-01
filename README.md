@@ -116,10 +116,10 @@ Esse subtítulo e conteúdo  é obrigatório.
 - Análise dos datasets
 - Busca por padrões
 - Análise	
-- Ano
-- Gênero
-- País de origem
-- Avaliações
+    - Ano
+    - Gênero
+    - País de origem
+    - Avaliações
 
 #### 3.6. Criação de Modelos Machine Learning
 
