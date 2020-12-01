@@ -23,12 +23,10 @@ Com base nas informações divulgadas pela empresa Netflix no final de 2019 o te
 Neste contexto, de um mundo globalizado onde existe uma diversidade muito grande de produtos de mídia surge a necessidade de uma ferramenta que consiga entender e disponibilizar para os usuários os videos e series mais relevantes, de forma a facilitar o processo de escolha.
 
 </br>
-A experiência de pesquisa é construída em torno de vários algoritmos. Um algoritmo tenta encontrar os vídeos que correspondem a uma determinada consulta, por exemplo, para exibir Friends para a consulta parcial “frien.”. Outro algoritmo prevê interesse em um conceito dado  da consulta parcial, por exemplo, identificando o conceito French Movies para a consulta “fren”. E um terceiro algoritmo encontra recomendações de vídeo para um determinado conceito, por exemplo, para vídeos recomendados sob o conceito French Movies (Figura 6). Os algoritmos de pesquisa combinam reproduzir dados, dados de pesquisa e metadados para chegar aos resultados e recomendações oferecidas.
-
+A experiência de pesquisa é construída em torno de vários algoritmos. Um algoritmo tenta encontrar os vídeos que correspondem a uma determinada consulta, por exemplo, para exibir Friends para a consulta parcial “frien.”. Outro algoritmo prevê interesse em um conceito dado  da consulta parcial, por exemplo, identificando o conceito French Movies para a consulta “fren”. E um terceiro algoritmo encontra recomendações de vídeo para um determinado conceito, por exemplo, para vídeos recomendados sob o conceito French Movies. Os algoritmos de pesquisa combinam reproduzir dados, dados de pesquisa e metadados para chegar aos resultados e recomendações oferecidas.
+</br>
 Com o surgimento dos e-commerces, a limitação de espaço físico das lojas foi vencida, fazendo com que seja possível, em uma mesma loja (a Amazon, por exemplo), se ter uma infinidade de produtos dos mais diversos tipos e categorias. E como encontrar algo que buscamos em um ambiente como esse?
-
 Vamos mudar um pouco de perspectiva. Imagine se quiséssemos assistir a um filme, abríssemos uma plataforma de streaming e ela nos apresentasse todos os incontáveis filmes de seu catálogo separados por gênero, mas sem uma ordem definida.
-
 Garimpar um filme de nosso agrado ali seria uma tarefa enfadonha, demorada e muitos de nós desistiríamos no meio do processo.
 
 #### 1.1. Objetivos do Trabalho 
