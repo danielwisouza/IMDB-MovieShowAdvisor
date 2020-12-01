@@ -132,10 +132,10 @@ Esse subtítulo e conteúdo  é obrigatório.
 #### 3.6. Criação de Modelos Machine Learning
 
 - Sistema de recomendação  por filtragem colaborativa
-- K-Nearest Neighbords – (KNN) - (algoritmos  de aprendizagem supervisionada) 
+    - K-Nearest Neighbords – (KNN) - (algoritmos  de aprendizagem supervisionada) 
 - Sistema de recomendação  baseada em conteúdo
-- Similaridade de cosseno
-- TF-IDF  (Análise estatistica)
+    - Similaridade de cosseno
+    - TF-IDF  (Análise estatistica)
 
 ### 3. Interpretação dos resultados
 
