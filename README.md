@@ -48,8 +48,11 @@ O sistema deve suportar dois tipos de filtragem, o primeiro se refere a filtrage
 <h1 align="center">
     <img alt="Gobarber" src="./image/COLABORATIVE-FILTERING.png" width="250px" />
       <img alt="Gobarber" src="./image/CONTENT-BASED-FILTRING.png" width="300px" />
-    Fonte: http://coral.ufsm.br/pet-si/index.php/sistemas-de-recomendacao-desvendando-uma-parte-da-magica/
+    
 </h1>
+Fonte: http://coral.ufsm.br/pet-si/index.php/sistemas-de-recomendacao-desvendando-uma-parte-da-magica/
+<br>
+
 
 
 
@@ -155,6 +158,9 @@ FORBES. <b>Streaming ganha ainda mais relevância com o isolamento social.</b> D
 Opinion Box Pesquisas S/A. <b> Pesquisa exclusiva: Insights sobre o mercado de streaming de vídeo no Brasil.</b> Disponível em https://blog.opinionbox.com/insights-mercado-de-streaming-de-video/ Acesso em: 15/09/2010.
 
 Digital House 2020. <b> Sistemas de recomendação: a experiência por trás de serviços de streaming.</b> Disponível em https://www.digitalhouse.com/br/blog/sistemas-de-recomendacao-dados Acesso em: 01/12/2010.
+
+Medium. <b> Deep Learning para Sistemas de Recomendação (Parte 1) — Introdução.</b> Disponível em https://medium.com/data-hackers/deep-learning-para-sistemas-de-recomenda%C3%A7%C3%A3o-parte-1-introdu%C3%A7%C3%A3o-b19a896c471e Acesso em: 01/12/2010.
+
 
 
 
