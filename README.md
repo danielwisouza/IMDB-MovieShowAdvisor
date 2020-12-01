@@ -142,7 +142,6 @@ Esse subtítulo e conteúdo  é obrigatório.
 - Comparação de resultados
 - Análise dos resultados 
 - Apresentação do resultados
-- Wikipedia
 - Beautifull Soup
 
 
