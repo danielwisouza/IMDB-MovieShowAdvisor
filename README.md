@@ -36,7 +36,7 @@ disponível (GAMA et al., 2011).
 <br></br>
 O mercado de streaming de vídeos movimenta bilhões de dólares por ano no mundo todo e um dos seus principais recursos para evitar a evasão de seus clientes é gerar boas recomendações de obras a serem assistidas. Tão mportante é esta tarefa, que a empresa líder neste mercado, Netflix ®, lançou em 2009 um desafio de 1 milhão de dólares, para desenvolvedores que conseguissem melhorar seu algoritmo de recomendação em 10%.
 <br></br>
-Visando atender a uma necessidade de mercado, ou seja, um sistema de recomendação de filmes e series com predição de nota, que não apenas diga se o usuário irá gostar ou não da obra, mas faça uma predição aproximada da nota que o usuário irá dar para a obra após assistir e
+Visando atender a uma necessidade de mercado, ou seja, um sistema de recomendação de filmes e series com predição de nota, que não apenas diga se o usuário irá gostar ou não da obra, mas faça uma predição aproximada da nota que o usuário irá dar para a obra após assistir.
 
 #### 1.1. Objetivos do Trabalho 
 O objetivo geral deste trabalho é desenvolver um sistema de recomendação de Filmes e Séries utilizando técnicas de analise de dados.
@@ -55,9 +55,9 @@ Este capítulo apresenta temas necessários para compreensão deste trabalho em 
 
 #### 2.1. Levantamento de Requisitos
 
-Machine Learning
-Sistema de recomendação por filtragem colaborativa
-Sistema de recomendação baseada em conteúdo
+- Machine Learning
+- Sistema de recomendação por filtragem colaborativa
+- Sistema de recomendação baseada em conteúdo
 
 O sistema deve suportar dois tipos de filtragem, o primeiro se refere a filtragem baseada e conteudo cujo os usuários informam quais gêneros de filmes/series, atores, diretores eles gostam; se preferem comedia, drama ou ação, dentre ouras características, por fim temos a filtregem colaborativa os usuários iniciam a utilização da plataforma, de acordo com uso avaliam os filmes/series que assistiram, com intuido de pontuar qual os agradou mais.
 
@@ -72,6 +72,8 @@ Diferente da filtragem baseada em conteúdo que forneceu recomendações de prod
 </h1>
 Fonte: http://coral.ufsm.br/pet-si/index.php/sistemas-de-recomendacao-desvendando-uma-parte-da-magica/
 <br>
+
+A aplicação backend está exposta como API para ser consumida e comunicar-se com a aplicação frontend, a comunicação segue a arquitetura RESTful e transportando dados no formato JSON.
 
 #### 2.2.	Tecnologias utilizadas
 Para o desenvolvimento desta aplicação foram escolhidas 5 tecnologias e seus recursos como:
