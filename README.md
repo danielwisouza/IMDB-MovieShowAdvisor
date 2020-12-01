@@ -33,6 +33,10 @@ Assim surgiram os sistemas de recomendação que, hoje, são muito presentes no 
 Um dos problemas encontrados ao criar algoritmos de recomendação é que, inicialmente, o sistema possui poucas informações do usuário. Isso dificulta a aprendizagem
 e o desempenho dos algoritmos. Dessa forma, é necessário utilizar mecanismos que reduzem o tempo de aprendizagem dos algoritmos e prevejam baseado na pouca informação
 disponível (GAMA et al., 2011).
+<br></br>
+O mercado de streaming de vídeos movimenta bilhões de dólares por ano no mundo todo e um dos seus principais recursos para evitar a evasão de seus clientes é gerar boas recomendações de obras a serem assistidas. Tão mportante é esta tarefa, que a empresa líder neste mercado, Netflix ®, lançou em 2009 um desafio de 1 milhão de dólares, para desenvolvedores que conseguissem melhorar seu algoritmo de recomendação em 10%.
+<br></br>
+Visando atender a uma necessidade de mercado, ou seja, um sistema de recomendação de filmes e series com predição de nota, que não apenas diga se o usuário irá gostar ou não da obra, mas faça uma predição aproximada da nota que o usuário irá dar para a obra após assistir e
 
 #### 1.1. Objetivos do Trabalho 
 O objetivo geral deste trabalho é desenvolver um sistema de recomendação de Filmes e Séries utilizando técnicas de analise de dados.
