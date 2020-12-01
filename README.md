@@ -52,6 +52,7 @@ O Capítulo 5 apresenta as considerações finais deste trabalho a partir da an�
 ### 2.	FUNDAMENTAÇÃO TÉCNICA
 Este capítulo apresenta temas necessários para compreensão deste trabalho em seu desenvolvimento: Técnologias.
 
+
 #### 2.1. Levantamento de Requisitos
 
 Machine Learning
@@ -186,6 +187,8 @@ Opinion Box Pesquisas S/A. <b> Pesquisa exclusiva: Insights sobre o mercado de s
 Digital House 2020. <b> Sistemas de recomendação: a experiência por trás de serviços de streaming.</b> Disponível em https://www.digitalhouse.com/br/blog/sistemas-de-recomendacao-dados Acesso em: 01/12/2010.
 
 Medium. <b> Deep Learning para Sistemas de Recomendação (Parte 1) — Introdução.</b> Disponível em https://medium.com/data-hackers/deep-learning-para-sistemas-de-recomenda%C3%A7%C3%A3o-parte-1-introdu%C3%A7%C3%A3o-b19a896c471e Acesso em: 01/12/2010.
+
+http://repositorio.satc.edu.br/bitstream/satc/340/2/FINAL-TCC-Douglas-RECOMENDAC%CC%A7A%CC%83O%20DE%20ANIMES%20UTILIZANDO%20MACHINE%20LEARNING%20-%20UMA%20ABORDAGEM%20BASEADA%20EM%20AVALIAC%CC%A7O%CC%83ES%20%28NOTAS%29%20DOS%20USUA%CC%81RIOS.pdf
 
 
 
