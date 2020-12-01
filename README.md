@@ -105,22 +105,26 @@ Para o desenvolvimento do projeto houve a separação em 5 partes Arquitetura do
 
 Esse subtítulo e conteúdo  é obrigatório.
 
+<h1 align="center">
+    <img alt="Gobarber" src="./image/modelo_sistema.png" />
+</h1> 
 
-#### 3.3. Coleta dos dados 
+Fonte: https://channel9.msdn.com/Series/Cortana-Intelligence-Suite-Education/CIS101-S3V5-Azure-Data-Factory-Components
+#### 3.2. Coleta dos dados 
 
 - IMDB (Informações gerais dos filmes)
     - https://www.imdb.com/
 - MovieLens (Informações de usuários e avaliações)
     - https://grouplens.org/
 
-#### 3.4. Fase de tratamento e processamento de dados 
+#### 3.3. Fase de tratamento e processamento de dados 
 
 - Remoção de colunas 
 - Tratamento valores nulos
 - Tratamento de valores duplicados
 - Junção de datasets
 
-#### 3.5. Fase de análise e exploração dos dados 
+#### 3.4. Fase de análise e exploração dos dados 
 - Análise dos datasets
 - Busca por padrões
 - Análise	
@@ -129,7 +133,7 @@ Esse subtítulo e conteúdo  é obrigatório.
     - País de origem
     - Avaliações
 
-#### 3.6. Criação de Modelos Machine Learning
+#### 3.5. Criação de Modelos Machine Learning
 
 - Sistema de recomendação  por filtragem colaborativa
     - K-Nearest Neighbords – (KNN) - (algoritmos  de aprendizagem supervisionada) 
@@ -137,7 +141,7 @@ Esse subtítulo e conteúdo  é obrigatório.
     - Similaridade de cosseno
     - TF-IDF  (Análise estatistica)
 
-### 3. Interpretação dos resultados
+### 3.6 Interpretação dos resultados
 
 - Comparação de resultados
 - Análise dos resultados 
