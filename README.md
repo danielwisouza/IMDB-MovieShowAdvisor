@@ -56,7 +56,9 @@ Fonte: http://coral.ufsm.br/pet-si/index.php/sistemas-de-recomendacao-desvendand
 #### 2.2.	Tecnologias utilizadas
 Para o desenvolvimento desta aplicação foram escolhidas 5 tecnologias e seus recursos como:
 
-•	Python;
+•   Python;
+
+•   Ruby;
 
 •	Jupyter Notebook;
 
