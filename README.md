@@ -47,7 +47,7 @@ O sistema deve suportar dois tipos de filtragem, o primeiro se refere a filtrage
 
 <h1 align="center">
     <img alt="Gobarber" src="./image/COLABORATIVE-FILTERING.png" width="250px" />
-      <img alt="Gobarber" src="./image/CONTENT-BASED-FILTRING.png" width="250px" />
+      <img alt="Gobarber" src="./image/CONTENT-BASED-FILTRING.png" width="350px" />
 </h1>
 
 
