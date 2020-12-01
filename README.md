@@ -16,10 +16,10 @@ Conforme artigo disponibilizado pelo TecMundo em 12/07/2019 o Brasil era o 6º m
  <h4>Fonte: Cuponation/Reprodução </h4>
    
 </h1>
-</br>
+<br></br>
 A Índia ocupa o 1º lugar, com mais de 185% de crescimento de visualização, seguida pela Coreia do Sul (+155%); Austrália, Indonésia e Tailândia (todas com +140%).
 Com base nas informações divulgadas pela empresa Netflix no final de 2019 o tempo médio gasto por pessoa assistindo à Netflix é superior ao de demais atividades:
-</br>
+<br></br>
 Neste contexto, de um mundo globalizado onde existe uma diversidade muito grande de produtos de mídia surge a necessidade de uma ferramenta que consiga entender e disponibilizar para os usuários os videos e series mais relevantes, de forma a facilitar o processo de escolha.
 
 #### 1.1. Objetivos do Trabalho 
