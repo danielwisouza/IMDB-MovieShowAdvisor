@@ -98,6 +98,7 @@ Uma aplicação multi plataforma disponível no Play Store destinado tanto para 
 
 Uma aplicação multi plataforma disponível no Play Store destinado tanto para visualiza;'ao de conteudo. Possui um cadastro simples, com possibilidade de vinculação com o facebook, apenas necessitando informar nome, e-mail, cartao de credito e aceitar as permissões da aplicação. Logo após o cadastro, há a possibilidade de cadastrar perfins de visualização definir favoriros e começar a asssitir filmes e series.
 
+#### 2.3.3 Google News
 
 ### 3. DESENVOLVIMENTO
 
