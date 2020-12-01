@@ -50,7 +50,7 @@ O sistema deve suportar dois tipos de filtragem, o primeiro se refere a filtrage
       <img alt="Gobarber" src="./image/CONTENT-BASED-FILTRING.png" width="300px" />
 </h1>
 
-
+http://coral.ufsm.br/pet-si/index.php/sistemas-de-recomendacao-desvendando-uma-parte-da-magica/
 
 #### 2.2.	Tecnologias utilizadas
 Para o desenvolvimento desta aplicação foram escolhidas 5 tecnologias e seus recursos como:
