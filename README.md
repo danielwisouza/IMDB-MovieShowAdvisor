@@ -75,6 +75,7 @@ Fonte: http://coral.ufsm.br/pet-si/index.php/sistemas-de-recomendacao-desvendand
 <br></br>
 A aplicação backend está exposta como API para ser consumida e comunicar-se com a aplicação frontend, a comunicação segue a arquitetura RESTful e transportando dados no formato JSON.
 <br></br>
+
 #### 2.2.	Tecnologias utilizadas
 Para o desenvolvimento desta aplicação foram escolhidas 5 tecnologias e seus recursos como:
 
