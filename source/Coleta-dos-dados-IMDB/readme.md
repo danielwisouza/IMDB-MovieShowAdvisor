@@ -1,24 +1,24 @@
-The internet movie database, [imdb.com](http://imdb.com/), is a website devoted to collecting movie data supplied by studios and fan.  It claims to be the biggest movie database on the web and is run by amazon.  More about information imdb.com can be found [online](http://imdb.com/help/show_leaf?about), including information about the [data collection process](http://imdb.com/help/show_leaf?infosource).
+O banco de dados de filmes da Internet, [imdb.com], é um site dedicado a coletar dados de filmes fornecidos por estúdios e fãs. Ele afirma ser o maior banco de dados de filmes da web e é administrado pela Amazon. Mais informações sobre a imdb.com podem ser encontradas online, incluindo informações sobre o processo de coleta de dados.
 
-IMDB makes their [raw data available](http://uk.imdb.com/interfaces/). Unfortunately, the data is divided into many text files and the format of each file differs slightly.  To create one data file containing all the desired information these ruby scripts extract the relevant information and store in a database.  Finally, this data is exported to csv to make it easier to import into data analysis packages.
+O IMDB disponibiliza seus dados brutos. Infelizmente, os dados são divididos em muitos arquivos de texto e o formato de cada arquivo é ligeiramente diferente. Para criar um arquivo de dados contendo todas as informações desejadas, esses scripts ruby ​​extraem as informações relevantes e armazenam em um banco de dados. Por fim, esses dados são exportados para csv para facilitar a importação para pacotes de análise de dados.
 
-The following text files were downloaded and used:
+Os seguintes arquivos de texto foram baixados e usados:
 
-* business.list. Total budget
-* genres.list.  Genres that a movie belongs to (eg. comedy and action)
-* movies.list.  Master list of all movie titles with year of production.
-* mpaa-ratings-reasons.list.  MPAA ratings.
-* ratings.list.  IMDB fan ratings.
-* running-times.list.  Movie length in minutes.
+* business.list. Orçamento total
+* genres.list. Gêneros aos quais um filme pertence (por exemplo, comédia e ação)
+* movies.list. Lista mestre de todos os títulos de filmes com ano de produção.
+* mpaa-ratings-reason.list. Classificações MPAA.
+* ratings.list. Avaliações de fãs do IMDB.
+* running-times.list. Duração do filme em minutos.
 
-Movies were selected for inclusion if they had a known length and had been rated by at least one IMDB user. The final output contains the following fields:
+Os filmes foram selecionados para inclusão se tivessem uma duração conhecida e tivessem sido avaliados por pelo menos um usuário do IMDB. A saída final contém os seguintes campos:
 
-* title.  Title of the movie.
-* year.  Year of release.
-* budget.  Total budget (if known) in US dollars
-* length.  Length in minutes.
-* rating.  Average IMDB user rating.
-* votes.  Number of IMDB users who rated this movie.
-* r1-10.  Distribution of votes for each rating, to mid point of nearest decile: 0 = no votes, 4.5 = 1-9$\%$ votes, 14.5 = 11-19$\%$ of votes, etc.  Due to rounding errors these may not sum to 100.
-* mpaa.  MPAA rating.
-* action, animation, comedy, drama, documentary, romance, short.  Binary variables representing if movie was classified as belonging to that genre.
+* título. Título do filme.
+* ano. Ano de lançamento.
+* despesas. Orçamento total (se conhecido) em dólares americanos
+* comprimento. Duração em minutos.
+* Avaliação. Avaliação média do usuário IMDB.
+* votos. Número de usuários IMDB que avaliaram este filme.
+* r1-10. Distribuição de votos para cada classificação, até o ponto médio do decil mais próximo: 0 = sem votos, 4,5 = 1-9 $% $ votos, 14,5 = 11-19 $% $ de votos, etc. Devido a erros de arredondamento, eles podem não somar a 100.
+* mpaa. Classificação de MPAA.
+* ação, animação, comédia, drama, documentário, romance, curta. Variáveis ​​binárias que representam se o filme foi classificado como pertencente a esse gênero
