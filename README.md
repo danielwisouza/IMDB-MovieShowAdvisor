@@ -7,7 +7,7 @@
 
 ### 1. INTRODUÇÃO
 
-O consumo de streamings de vídeos está e constante crescimento em todo mundo, com cenário vivido em 2020 por decorreria da COVID-19  fez com que várias partes do mundo adquirissem o isolamento social, medida tomada pela Organização Mundial da Saúde (OMS) como modo a minimizar o contato social, diante disso o consumo de streamings teve um aumento exponencial se transformando em uma das principais formas de entretenimento das pessoas que, confinadas em casa, passaram a ficar mais tempo diante da televisão.
+O consumo de streamings de vídeos está e constante crescimento em todo mundo, com cenário vivido em 2020 por decorrência COVID-19  fez com que várias partes do mundo adquirissem o isolamento social, medida tomada pela Organização Mundial da Saúde (OMS) como modo a minimizar o contato social, diante disso o consumo de streamings teve um aumento exponencial se transformando em uma das principais formas de entretenimento das pessoas que, confinadas em casa, passaram a ficar mais tempo diante da televisão.
 Conforme artigo disponibilizado pelo TecMundo em 12/07/2019 o Brasil era o 6º maior consumidor de streaming de filmes e séries do mundo
 
 -Imagem
@@ -20,11 +20,10 @@ Conforme artigo disponibilizado pelo TecMundo em 12/07/2019 o Brasil era o 6º m
 A Índia ocupa o 1º lugar, com mais de 185% de crescimento de visualização, seguida pela Coreia do Sul (+155%); Austrália, Indonésia e Tailândia (todas com +140%).
 Com base nas informações divulgadas pela empresa Netflix no final de 2019 o tempo médio gasto por pessoa assistindo à Netflix é superior ao de demais atividades:
 
-
-
+Neste contexto, de um mundo globalizado onde existe uma diversidade muito grande de produtos de mídia surge a necessidade de uma ferramenta que consiga entender e disponibilizar para os usuários os videos e series mais relevantes, de forma a facilitar o processo de escolha.
 
 #### 1.1. Objetivos do Trabalho 
-O objetivo geral deste trabalho é desenvolver um sistema de recomendação de Filmes e Séries.
+O objetivo geral deste trabalho é desenvolver um sistema de recomendação de Filmes e Séries utilizando técnicas de analise de dados.
 
 #### 1.2. Conteúdo do Trabalho
 O presente trabalho está estruturado em seis Capítulos, cujo conteúdo é sucintamente apresentado a seguir:
@@ -43,11 +42,15 @@ Machine Learning
 Sistema de recomendação por filtragem colaborativa
 Sistema de recomendação baseada em conteúdo
 
-A aplicação deverá permitir dois tipos de cadastros, o primeiro se refere a pessoas que estão à procura de adotarem um animal doméstico; o segundo a protetores de animais que estão à procura de um possível adotante para os animais resgatados.
+O sistema deve suportar dois tipos de filtragem, o primeiro se refere a filtragem baseada e conteudo cujo os usuários informam quais gêneros de filmes/series, atores, diretores eles gostam; se preferem comedia, drama ou ação, dentre ouras características, por fim temos a filtregem colaborativa os usuários iniciam a utilização da plataforma, de acordo com uso avaliam os filmes/series que assistiram, com intuido de pontuar qual os agradou mais.
 
-Eu como um adotante preciso criar uma conta e informar dados como nome, sobrenome, cpf, e-mail, telefone, senha, e aceitar que o dispositivo colete sua localização, para poder visualizar os animais com todos os dados que acompanha. Vale ressaltar que a localização completa não ficara disponível para os demais usuários, será usado para fins de segurança e controle de adoções, além do mais para geolocalização, para informar a região do animal comparado ao possível dono. Para o acesso utilizando o usuário “adotante(a)”, será possível: • Enviar mensagens; • Agendar visita; • Visualizar agenda; • Remarcar visitas; • Des agendar visitas; • Editar agenda, • Editar cadastro pessoal.
 
-Eu como cuidadora preciso cadastrar os animais domésticos resgatados, para isso eu preciso informar o peso do animal, seu tamanho, idade, a raça e cor além da história de resgate do animal preenchendo também todas as medidas tomadas para tratamento deste. Para o acesso como “cuidadora”, será possível: • Editar agenda, como por exemplo: sua forma de exibição; • Visualizar sua agenda geral, conseguindo observar todos os adotantes que serão atendidos durante a semana, ou mês, tendo uma visualização detalhada sobre cada adotante ao clicar sobre sua reserva na agenda.
+<h1 align="center">
+    <img alt="Gobarber" src="./image/COLABORATIVE-FILTERING.png" width="250px" />
+      <img alt="Gobarber" src="./image/CONTENT-BASED-FILTRING.png" width="250px" />
+</h1>
+
+
 
 #### 2.2.	Tecnologias utilizadas
 Para o desenvolvimento desta aplicação foram escolhidas 5 tecnologias e seus recursos como:
@@ -149,4 +152,8 @@ Canal Tech. <b>Tempo médio gasto assistindo à Netflix é superior ao de demais
 FORBES. <b>Streaming ganha ainda mais relevância com o isolamento social.</b> Disponível em https://www.forbes.com.br/negocios/2020/08/streaming-ganha-ainda-mais-relevancia-com-o-isolamento-social/ Acesso em: 08/09/2010.
 
 Opinion Box Pesquisas S/A. <b> Pesquisa exclusiva: Insights sobre o mercado de streaming de vídeo no Brasil.</b> Disponível em https://blog.opinionbox.com/insights-mercado-de-streaming-de-video/ Acesso em: 15/09/2010.
+
+Digital House 2020. <b> Sistemas de recomendação: a experiência por trás de serviços de streaming.</b> Disponível em https://www.digitalhouse.com/br/blog/sistemas-de-recomendacao-dados Acesso em: 01/12/2010.
+
+
 
