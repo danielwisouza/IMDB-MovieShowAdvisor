@@ -22,6 +22,15 @@ Com base nas informações divulgadas pela empresa Netflix no final de 2019 o te
 <br></br>
 Neste contexto, de um mundo globalizado onde existe uma diversidade muito grande de produtos de mídia surge a necessidade de uma ferramenta que consiga entender e disponibilizar para os usuários os videos e series mais relevantes, de forma a facilitar o processo de escolha.
 
+</br>
+A experiência de pesquisa é construída em torno de vários algoritmos. Um algoritmo tenta encontrar os vídeos que correspondem a uma determinada consulta, por exemplo, para exibir Friends para a consulta parcial “frien.”. Outro algoritmo prevê interesse em um conceito dado  da consulta parcial, por exemplo, identificando o conceito French Movies para a consulta “fren”. E um terceiro algoritmo encontra recomendações de vídeo para um determinado conceito, por exemplo, para vídeos recomendados sob o conceito French Movies (Figura 6). Os algoritmos de pesquisa combinam reproduzir dados, dados de pesquisa e metadados para chegar aos resultados e recomendações oferecidas.
+
+Com o surgimento dos e-commerces, a limitação de espaço físico das lojas foi vencida, fazendo com que seja possível, em uma mesma loja (a Amazon, por exemplo), se ter uma infinidade de produtos dos mais diversos tipos e categorias. E como encontrar algo que buscamos em um ambiente como esse?
+
+Vamos mudar um pouco de perspectiva. Imagine se quiséssemos assistir a um filme, abríssemos uma plataforma de streaming e ela nos apresentasse todos os incontáveis filmes de seu catálogo separados por gênero, mas sem uma ordem definida.
+
+Garimpar um filme de nosso agrado ali seria uma tarefa enfadonha, demorada e muitos de nós desistiríamos no meio do processo.
+
 #### 1.1. Objetivos do Trabalho 
 O objetivo geral deste trabalho é desenvolver um sistema de recomendação de Filmes e Séries utilizando técnicas de analise de dados.
 
@@ -44,6 +53,9 @@ Sistema de recomendação baseada em conteúdo
 
 O sistema deve suportar dois tipos de filtragem, o primeiro se refere a filtragem baseada e conteudo cujo os usuários informam quais gêneros de filmes/series, atores, diretores eles gostam; se preferem comedia, drama ou ação, dentre ouras características, por fim temos a filtregem colaborativa os usuários iniciam a utilização da plataforma, de acordo com uso avaliam os filmes/series que assistiram, com intuido de pontuar qual os agradou mais.
 
+Em um sistema de recomendação baseado em conteúdo o conhecimento dos produtos e as informações do cliente são levados em consideração e com base no conteúdo que você visualizou na Netflix fornece sugestões semelhantes. Por exemplo, se você assistiu a um filme com um gênero de ficção científica o sistema de recomendação, com base em conteúdo, fornecerá sugestões de filmes semelhantes com o mesmo gênero.
+
+Diferente da filtragem baseada em conteúdo que forneceu recomendações de produtos similares, a Filtragem colaborativa fornece recomendações baseadas nos perfis semelhantes de seus usuários. Uma vantagem importante da filtragem colaborativa é que ela é independente do conhecimento do produto. Em vez disso, conta com os usuários com uma suposição básica de que o que eles gostaram no passado também gostará no futuro. Por exemplo, se uma pessoa A assiste gêneros de crime, ficção científica e suspense e B assiste a gêneros de ficção científica, suspense e ação, então A também gostará de ação e B gostará de gênero de crime.
 
 <h1 align="center">
     <img alt="Gobarber" src="./image/COLABORATIVE-FILTERING.png" width="250px" />
