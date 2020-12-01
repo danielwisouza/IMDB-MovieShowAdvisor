@@ -27,7 +27,7 @@ A experiência de pesquisa é construída em torno de vários algoritmos. Um alg
 <br></br>
 Com o surgimento dos e-commerces, a limitação de espaço físico das lojas foi vencida, fazendo com que seja possível, em uma mesma loja (a Amazon, por exemplo), se ter uma infinidade de produtos dos mais diversos tipos e categorias. E como encontrar algo que buscamos em um ambiente como esse? Imagine se quiséssemos assistir a um filme, abríssemos uma plataforma de streaming e ela nos apresentasse todos os incontáveis filmes de seu catálogo separados por gênero, mas sem uma ordem definida.
 <br></br>
-Garimpar um filme de nosso agrado ali seria uma tarefa enfadonha, demorada e muitos de nós desistiríamos no meio do processo.
+Encontrar um filme de nosso gosto esté cenario seria uma tarefa muito dificil, demorada e muitos de nós desistiríamos no meio do processo.
 Assim surgiram os sistemas de recomendação que, hoje, são muito presentes no nosso dia a dia.
 <br></br>
 Um dos problemas encontrados ao criar algoritmos de recomendação é que, inicialmente, o sistema possui poucas informações do usuário. Isso dificulta a aprendizagem
