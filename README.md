@@ -109,7 +109,6 @@ Esse subtítulo e conteúdo  é obrigatório.
     <img alt="Gobarber" src="./image/modelo_sistema.png" />
 </h1> 
 
-Fonte: https://channel9.msdn.com/Series/Cortana-Intelligence-Suite-Education/CIS101-S3V5-Azure-Data-Factory-Components
 #### 3.2. Coleta dos dados 
 
 - IMDB (Informações gerais dos filmes)
@@ -141,7 +140,7 @@ Fonte: https://channel9.msdn.com/Series/Cortana-Intelligence-Suite-Education/CIS
     - Similaridade de cosseno
     - TF-IDF  (Análise estatistica)
 
-### 3.6 Interpretação dos resultados
+#### 3.6 Interpretação dos resultados
 
 - Comparação de resultados
 - Análise dos resultados 
