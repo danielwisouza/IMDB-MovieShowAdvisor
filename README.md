@@ -145,12 +145,15 @@ Esse subtítulo e conteúdo  é obrigatório.
 
 #### 3.3. Fase de tratamento e processamento de dados 
 
+
 - Remoção de colunas 
 - Tratamento valores nulos
 - Tratamento de valores duplicados
 - Junção de datasets
 
 #### 3.4. Fase de análise e exploração dos dados 
+
+- Ingestão de dados 
 - Análise dos datasets
 - Busca por padrões
 - Análise	
