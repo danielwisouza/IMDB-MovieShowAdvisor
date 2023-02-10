@@ -1,4 +1,3 @@
-# Projeto Trabalho de Graduação em Banco de Dados I
 
 ## TEMA:  Movie-Show Advisor: Sistemas de Recomendação de streamings (filmes e séries) 🎥
 <h1 align="center">
