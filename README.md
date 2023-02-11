@@ -21,15 +21,16 @@
  
 Projeto criado com intuído de analisar dados de títulos do banco de dados IMDB.
 
-Pergunta 1 - Quais São as Categorias de Filmes Mais Comuns no IMDB?
-Pergunta 2 - Qual o Número de Títulos Por Gênero?
-Pergunta 3 - Qual a Mediana de Avaliação dos Filmes Por Gênero?
-Pergunta 4 - Qual a Mediana de Avaliação dos Filmes Em Relação ao Ano de Estréia?
-Pergunta 5 - Qual o Número de Filmes Avaliados Por Gênero Em Relação ao Ano de Estréia?
-Pergunta 6 - Qual o Filme Com Maior Tempo de Duração? Calcule os Percentis.
-Pergunta 7 - Qual a Relação Entre Duração e Gênero?
-Pergunta 8 - Qual o Número de Filmes Produzidos Por País?
-Pergunta 9 - Quais São os Top 10 Melhores Filmes?
+<dd>Pergunta 1 - Quais São as Categorias de Filmes Mais Comuns no IMDB?</dd>
+                            <dd>Pergunta 2 - Qual o Número de Títulos Por Gênero?</dd>
+                            <dd>Pergunta 3 - Qual a Mediana de Avaliação dos Filmes Por Gênero?</dd>
+                            <dd>Pergunta 4 - Qual a Mediana de Avaliação dos Filmes Em Relação ao Ano de Estréia?</dd>
+                            <dd>Pergunta 5 - Qual o Número de Filmes Avaliados Por Gênero Em Relação ao Ano de Estréia?</dd>
+                            <dd>Pergunta 6 - Qual o Filme Com Maior Tempo de Duração? Calcule os Percentis.</dd>
+                            <dd>Pergunta 7 - Qual a Relação Entre Duração e Gênero?</dd>
+                            <dd>Pergunta 8 - Qual o Número de Filmes Produzidos Por País?</dd>
+                            <dd>Pergunta 9 - Quais São os Top 10 Melhores Filmes?</dd>
+                            <dd>Pergunta 10 - Quais São os Top 10 Piores Filmes?</dd>
 
 Pergunta 10 - Quais São os Top 10 Piores Filmes?
 #### 2.0	Tecnologias utilizadas
