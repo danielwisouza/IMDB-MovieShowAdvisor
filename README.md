@@ -1,5 +1,5 @@
 
-## TEMA:  Movie-Show Advisor: Analise de dados de streamings (filmes e séries) 🎥
+## TEMA:  Movie-Show Advisor: Análise de dados de streamings IMDB (filmes e séries) 🎥
 <h1 align="center">
     <img alt="imagem_Cuponation" src="./image/Controle.jpg" width="400px" />
 </h1>
