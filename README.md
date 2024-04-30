@@ -39,8 +39,7 @@ Para o desenvolvimento desta aplicação foram utilizadas as tecnologias.
 • Python;
 • SQL;
 
-[![]([https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ](https://www.youtube.com/watch?v=Mf661CqAwMQ&t=18s&ab_channel=DanielWilliansdeSouza))]([https://youtu.be/dQw4w9WgXcQ](https://www.youtube.com/watch?v=Mf661CqAwMQ&t=18s&ab_channel=DanielWilliansdeSouza))
-
+[<img src="![image](https://github.com/danielwisouza/Movie-Show-Advisor/assets/25550355/1517b827-9c8c-43b4-8e9d-0db77addc91e)" width="50%">](![image](https://github.com/danielwisouza/Movie-Show-Advisor/assets/25550355/682db272-35c9-40c0-b347-d1630f0e067d)")
 • Ambiente em Cloud da Google Colab; https://colab.research.google.com/notebooks/welcome.ipynb?hl=pt-BR
 
 
