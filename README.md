@@ -39,6 +39,8 @@ Para o desenvolvimento desta aplicação foram utilizadas as tecnologias.
 • Python;
 • SQL;
 
+[![]([https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ](https://www.youtube.com/watch?v=Mf661CqAwMQ&t=18s&ab_channel=DanielWilliansdeSouza))]([https://youtu.be/dQw4w9WgXcQ](https://www.youtube.com/watch?v=Mf661CqAwMQ&t=18s&ab_channel=DanielWilliansdeSouza))
+
 • Ambiente em Cloud da Google Colab; https://colab.research.google.com/notebooks/welcome.ipynb?hl=pt-BR
 
 
