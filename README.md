@@ -39,7 +39,10 @@ Para o desenvolvimento desta aplicação foram utilizadas as tecnologias.
 • Python;
 • SQL;
 
-[<img src="![image](https://github.com/danielwisouza/Movie-Show-Advisor/assets/25550355/1517b827-9c8c-43b4-8e9d-0db77addc91e)" width="50%">](![image](https://github.com/danielwisouza/Movie-Show-Advisor/assets/25550355/682db272-35c9-40c0-b347-d1630f0e067d)")
+title: Example product landing page
+product_video: 'https://www.youtube-nocookie.com/embed/URL'
+product_video_transcript: /content/video-transcripts/TRANSCRIPT-TITLE
+
 • Ambiente em Cloud da Google Colab; https://colab.research.google.com/notebooks/welcome.ipynb?hl=pt-BR
 
 
