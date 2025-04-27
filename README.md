@@ -72,5 +72,3 @@ To run this project, follow these steps:
     ```bash
     python main.py
     ```
-
-4. For detailed steps on data preparation and model execution, refer to the `README.md` file within the repository.
