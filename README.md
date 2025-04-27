@@ -61,8 +61,8 @@ After analyzing the IMDB data, we uncover key insights that answer the above que
 
 To get started with the project, follow these steps:
 
-1. Open the [Movie-Show-Advisor: IMDB Streaming Data Analysis notebook]() directly in Google Colab.
+1. Open the [Movie-Show-Advisor: IMDB Streaming Data Analysis notebook](https://github.com/danielwisouza/IMDB-MovieShowAdvisor-/blob/master/Movie_Show_Advisor_Analise.ipynb) directly in Google Colab.
+   
+3. The notebook includes all code and explanations for analyzing the IMDB data. Simply run the cells in the notebook to perform the analysis.
 
-2. The notebook includes all code and explanations for analyzing the IMDB data. Simply run the cells in the notebook to perform the analysis.
-
-3. No need to download or run anything locally—just use Google Colab to interact with the project.
+4. No need to download or run anything locally—just use Google Colab to interact with the project.
