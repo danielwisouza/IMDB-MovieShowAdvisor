@@ -1,50 +1,76 @@
+# Movie-Show Advisor: IMDB Streaming Data Analysis 🎥
 
-## TEMA:  Movie-Show Advisor: Análise de dados de streamings IMDB (filmes e séries) 🎥
-<h1 align="center">
-    <img alt="imagem_Cuponation" src="./image/Controle.jpg" width="400px" />
-</h1>
+## Table of Contents
+1. [Introduction](#1-introduction)
+2. [Technologies Used](#2-technologies-used)
+3. [Questions Analyzed](#3-questions-analyzed)
+4. [Data Source](#4-data-source)
+5. [Key Insights](#5-key-insights)
+6. [Setup and Installation](#6-setup-and-installation)
 
-### 1. INTRODUÇÃO
+## 1. Introduction
 
-## Pacotes Necessários:
+This project is designed to analyze IMDB movie and TV series data. We will explore various aspects of movie data such as genres, ratings, and the relationship between movie duration and genres. By analyzing the data, we aim to answer the following questions:
 
-- import pandas as pd 
-- import numpy as np
-- from sklearn.ensemble import RandomForestClassifier
-- from sklearn.model_selection import train_test_split 
+### Questions Analyzed:
+- **Question 1**: What are the most common movie categories on IMDB?
+- **Question 2**: How many titles are there per genre?
+- **Question 3**: What is the median rating of movies by genre?
+- **Question 4**: What is the median rating of movies based on their release year?
+- **Question 5**: How many movies are rated by genre and release year?
+- **Question 6**: Which movie has the longest duration? Calculate the percentiles.
+- **Question 7**: What is the relationship between movie duration and genre?
+- **Question 8**: How many movies are produced per country?
+- **Question 9**: What are the top 10 best-rated movies?
+- **Question 10**: What are the top 10 worst-rated movies?
 
-## Dados de dados utilizado IMDB
+## 2. Technologies Used
 
-### Link: https://www.imdb.com/
+This application was developed using the following technologies:
 
-## 1. INTRODUÇÃO
- 
-Projeto criado com intuído de analisar dados de títulos do banco de dados IMDB.
+- **Python**
+- **SQL**
+- **Google Colab Cloud Environment**: [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb?hl=pt-BR)
 
-<dd>Pergunta 1 - Quais São as Categorias de Filmes Mais Comuns no IMDB?</dd>
-                            <dd>Pergunta 2 - Qual o Número de Títulos Por Gênero?</dd>
-                            <dd>Pergunta 3 - Qual a Mediana de Avaliação dos Filmes Por Gênero?</dd>
-                            <dd>Pergunta 4 - Qual a Mediana de Avaliação dos Filmes Em Relação ao Ano de Estréia?</dd>
-                            <dd>Pergunta 5 - Qual o Número de Filmes Avaliados Por Gênero Em Relação ao Ano de Estréia?</dd>
-                            <dd>Pergunta 6 - Qual o Filme Com Maior Tempo de Duração? Calcule os Percentis.</dd>
-                            <dd>Pergunta 7 - Qual a Relação Entre Duração e Gênero?</dd>
-                            <dd>Pergunta 8 - Qual o Número de Filmes Produzidos Por País?</dd>
-                            <dd>Pergunta 9 - Quais São os Top 10 Melhores Filmes?</dd>
-                            <dd>Pergunta 10 - Quais São os Top 10 Piores Filmes?</dd>
+The project uses Python libraries like `pandas`, `numpy`, and `sklearn` to perform data analysis and machine learning tasks.
 
-Pergunta 10 - Quais São os Top 10 Piores Filmes?
-#### 2.0	Tecnologias utilizadas
-Para o desenvolvimento desta aplicação foram utilizadas as tecnologias.
+## 3. Questions Analyzed
 
-• Python;
-• SQL;
+The project analyzes a set of questions related to IMDB movie data. These questions help to understand trends, relationships, and the distribution of data such as movie genres, ratings, and other factors. You can check the questions listed in the introduction section above.
 
-title: Example product landing page
-product_video: 'https://www.youtube-nocookie.com/embed/URL'
-product_video_transcript: /content/video-transcripts/TRANSCRIPT-TITLE
+## 4. Data Source
 
-• Ambiente em Cloud da Google Colab; https://colab.research.google.com/notebooks/welcome.ipynb?hl=pt-BR
+The data for this project was sourced from IMDB:
 
+- **IMDB**: [IMDB Website](https://www.imdb.com/)
 
+This dataset contains information about movies and TV series, including their ratings, genres, and release years.
 
+## 5. Key Insights
 
+After analyzing the IMDB data, we uncover key insights that answer the above questions, helping to guide recommendations for users of streaming platforms. For example:
+- Understanding which genres are most common and their ratings.
+- Analyzing the relationship between a movie's duration and its genre.
+- Identifying the best and worst-rated movies.
+
+## 6. Setup and Installation
+
+To run this project, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone <repo-url>
+    cd Movie-Show-Advisor
+    ```
+
+2. Install necessary dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the analysis in Google Colab or locally by executing the main Python script:
+    ```bash
+    python main.py
+    ```
+
+4. For detailed steps on data preparation and model execution, refer to the `README.md` file within the repository.
