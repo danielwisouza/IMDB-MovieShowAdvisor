@@ -6,11 +6,11 @@
 3. [Questions Analyzed](#3-questions-analyzed)
 4. [Data Source](#4-data-source)
 5. [Key Insights](#5-key-insights)
-6. [Setup and Installation](#6-setup-and-installation)
+6. [Setup and Access](#6-setup-and-access)
 
 ## 1. Introduction
 
-This project is designed to analyze IMDB movie and TV series data. We will explore various aspects of movie data such as genres, ratings, and the relationship between movie duration and genres. By analyzing the data, we aim to answer the following questions:
+This project is designed to analyze IMDB movie and TV series data. We explore various aspects of movie data such as genres, ratings, and the relationship between movie duration and genres. By analyzing the data, we aim to answer the following questions:
 
 ### Questions Analyzed:
 - **Question 1**: What are the most common movie categories on IMDB?
@@ -26,7 +26,7 @@ This project is designed to analyze IMDB movie and TV series data. We will explo
 
 ## 2. Technologies Used
 
-This application was developed using the following technologies:
+This project was developed using the following technologies:
 
 - **Python**
 - **SQL**
@@ -53,22 +53,12 @@ After analyzing the IMDB data, we uncover key insights that answer the above que
 - Analyzing the relationship between a movie's duration and its genre.
 - Identifying the best and worst-rated movies.
 
-## 6. Setup and Installation
+## 6. Setup and Access
 
-To run this project, follow these steps:
+To get started with the project, follow these steps:
 
-1. Clone the repository:
-    ```bash
-    git clone <repo-url>
-    cd Movie-Show-Advisor
-    ```
+1. Open the [Movie-Show-Advisor: IMDB Streaming Data Analysis notebook]() directly in Google Colab.
 
-2. Install necessary dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. The notebook includes all code and explanations for analyzing the IMDB data. Simply run the cells in the notebook to perform the analysis.
 
-3. Run the analysis in Google Colab or locally by executing the main Python script:
-    ```bash
-    python main.py
-    ```
+3. No need to download or run anything locally—just use Google Colab to interact with the project.
