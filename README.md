@@ -1,5 +1,9 @@
 # Movie-Show Advisor: IMDB Streaming Data Analysis 🎥
 
+<h1 align="center">
+    <img alt="Movie-Show Advisor" src="./image/Controle.jpg" width="400px" />
+</h1>
+
 ## Table of Contents
 1. [Introduction](#1-introduction)
 2. [Technologies Used](#2-technologies-used)
